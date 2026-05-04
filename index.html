@@ -4,169 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>دكتور أحمد | احجز الآن</title>
+<link rel="stylesheet" href="style.css">
 
-<style>
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Cairo", sans-serif;
-}
-
-body {
-  direction: rtl;
-  background: #f5f7fa;
-  color: #333;
-}
-
-/* NAVBAR */
-nav {
-  background: #0a3d62;
-  color: white;
-  padding: 15px 30px;
-  display: flex;
-  justify-content: space-between;
-}
-
-nav h2 {
-  font-size: 20px;
-}
-
-nav a {
-  color: white;
-  text-decoration: none;
-  margin-right: 15px;
-}
-
-/* HERO */
-.hero-content{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-.doctor-img {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    object-fit: cover;
-    border:4px solid white;
-    margin-bottom: 20px;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
-}
-.hero {
-  background: linear-gradient(to right, #0a3d62, #3c6382);
-  color: white;
-  padding: 80px 20px;
-  text-align: center;
-}
-
-.hero h1 {
-  font-size: 32px;
-  margin-bottom: 15px;
-}
-
-.hero p {
-  margin-bottom: 20px;
-}
-.contact-buttons {
-    margin-top: 15px;
-}
-.contact-buttons .btn{
-    margin: 5px;
-}
-.whatsapp {
-    background: #25D366;
-}
-.whatsapp:hover {
-    background: #1ebe5d;
-}
-.btn {
-  background: #38ada9;
-  padding: 12px 25px;
-  border: none;
-  color: white;
-  cursor: pointer;
-  border-radius: 5px;
-  font-size: 16px;
-}
-
-.btn:hover {
-  background: #079992;
-}
-
-/* SECTION */
-.section {
-  padding: 60px 20px;
-  text-align: center;
-}
-
-.section h2 {
-  margin-bottom: 30px;
-  color: #0a3d62;
-}
-
-/* SERVICES */
-.services , .reviews {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-}
-
-.card {
-  background: white;
-  padding: 20px;
-  width: 250px;
-  border-radius: 10px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-}
-
-/* ABOUT */
-.about {
-  max-width: 700px;
-  margin: auto;
-}
-/* REVIEWS */
-.review {
-  background: white;
-  padding: 20px;
-  width: 300px;
-  border-radius: 10px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-}
-.stars {
-  color: #f39c12;
-  font-size: 18px;
-  margin-bottom: 10px;
-}
-
-/* CONTACT */
-.contact {
-  background: #0a3d62;
-  color: white;
-}
-
-.contact input, .contact textarea {
-  width: 80%;
-  padding: 10px;
-  margin: 10px 0;
-  border: none;
-  border-radius: 5px;
-}
-.map iframe {
-    width: 90%;
-    height: 300px;
-    border-radius: 10px;
-    margin-top: 20px;
-
-}
-footer {
-  text-align: center;
-  padding: 15px;
-  background: #222;
-  color: white;
-}
-</style>
 </head>
 
 <body>
@@ -188,9 +27,9 @@ footer {
   <h1>رعايتك الصحية تبدأ من هنا</h1>
   <p>احجز الآن مع أفضل طبيب متخصص بخبرة أكثر من 10 سنوات</p>
   <button class="btn" onclick="scrollToContact()">احجز الآن</button>
-  <p>📞 01012345678</p</p>
-  <div class="contact-buttons"><a href="tel:01012345678" class="btn">اتصل بنا</a>
-    <a href="https://wa.me/201012345678" class="btn">تواصل عبر واتساب</a>
+  <p>📞 01065639112</p>
+  <div class="contact-buttons"><a href="tel:01065639112" class="btn">اتصل بنا</a>
+    <a href="https://wa.me/201065639112" class="btn">تواصل عبر واتساب</a>
     </div>
 
 </section>
@@ -227,7 +66,7 @@ footer {
 <section class="map">
   <h2>موقع الدكتور</h2>
   <iframe src="https://www.google.com/maps?q=30.0444%2C31.2357&z=15&ie=UTF8&iwloc=&output=embed"
-    allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+   title="خريطة العيادة" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
   </iframe>
 </section>
 
@@ -255,13 +94,7 @@ footer {
   جميع الحقوق محفوظة © 2026
 </footer>
 
-<script>
-function scrollToContact() {
-  document.getElementById("contact").scrollIntoView({
-    behavior: "smooth"
-  });
-}
-</script>
 
+<script src="main.js"></script>
 </body>
 </html>
