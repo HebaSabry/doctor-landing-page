@@ -81,13 +81,13 @@
 <!-- CONTACT -->
 <section class="section contact" id="contact">
   <h2>احجز الآن</h2>
-  <input type="text" placeholder="الاسم">
+  <input type="text" id="username" placeholder="الاسم">
   <br>
-  <input type="tel" placeholder="رقم الهاتف">
+  <input type="tel" id="userphone" placeholder="رقم الهاتف">
   <br>
-  <textarea placeholder="اكتب رسالتك"></textarea>
+  <textarea id="message" placeholder="اكتب رسالتك"></textarea>
   <br>
-  <button class="btn">إرسال</button>
+  <button class="btn" onclick="sendBooking()">إرسال</button>
 </section>
 
 <footer>
@@ -95,6 +95,6 @@
 </footer>
 
 
-<script src="main.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
