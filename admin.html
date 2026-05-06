@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta view-port="width=device-width, initial-scale=1.0">
+    <title>لوحة التحكم - العيادة</title>
+    <style>
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        th, td { border: 1px solid #ddd; padding: 12px; text-align: center; }
+        th { background-color: #4CAF50; color: white; }
+    </style>
+</head>
+<body>
+    <h2>قائمة الحجوزات الحالية</h2>
+    <table id="bookingsTable">
+        <thead>
+            <tr>
+                <th>الاسم</th>
+                <th>رقم الهاتف</th>
+                <th>التاريخ</th>
+            </tr>
+        </thead>
+        <tbody>
+            </tbody>
+    </table>
+
+    <script>
+        // فنكشن بتجيب البيانات من السيرفر بمجرد فتح الصفحة
+        async function loadBookings() {
+            const response = await fetch('http://localhost:3000/all-bookings');
+            const data = await response.json();
+            
+            const tableBody = document.querySelector("#bookingsTable tbody");
+            tableBody.innerHTML = ""; // نمسح الجدول القديم
+            data.forEach(booking => {
+            const dateText = booking.createdAt ? new Date(booking.createdAt).toLocaleString('ar-EG') : new Date().toLocaleString('ar-EG'); // نستخدم التاريخ الحالي لكل حجز (يمكن تعديله لعرض تاريخ الحجز الحقيقي إذا كان محفوظ في DB)
+
+                const row = `<tr>
+                    <td>${booking.name}</td>
+                    <td>${booking.phone}</td>
+                    <td>${dateText}</td>
+                </tr>`;
+                tableBody.insertAdjacentHTML('beforeend', row);
+            });
+        }
+
+        window.onload = loadBookings; // شغل الفنكشن أول ما الصفحة تحمل
+    </script>
+</body>
+</html>
